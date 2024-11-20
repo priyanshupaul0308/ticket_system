@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <<script src="https://cdn.tailwindcss.com"></script>
+    <title>Your Tickets</title>
+</head>
+<body>
+    <div class="container mx-auto p-5">
+        <h1 class="text-2xl font-bold">Your Tickets</h1>
+        <form action="/user/tickets" method="POST" class="mb-5">
+            <textarea name="description" placeholder="Ticket Description" required class="border p-2 w-full mb-2"></textarea>
+            <button type=" submit" class="btn">Create Ticket</button>
+        </form>
+        <ul>
+            {{#each tickets}}
+                <li class="border p-2 mb-2">
+                    <strong>Ticket No:</strong> {{this._id}} - <strong>Status:</strong> {{this.status}} - <strong>Description:</strong> {{this.description}}
+                    <a href="/user/tickets/{{this._id}}" class="text-blue-500">Check Status</a>
+                </li>
+            {{/each}}
+        </ul>
+    </div>
+</body>
+</html>

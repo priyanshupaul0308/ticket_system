@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Ticket Status</title>
+</head>
+<body>
+    <div class="container mx-auto p-5">
+        <h1 class="text-2xl font-bold">Ticket Status</h1>
+        <div class="border p-4">
+            <strong>Ticket No:</strong> {{ticket._id}}<br>
+            <strong>Description:</strong> {{ticket.description}}<br>
+            <strong>Status:</strong> {{ticket.status}}<br>
+        </div>
+        <a href="/user/tickets" class="text-blue-500">Back to Tickets</a>
+    </div>
+</body>
+</html>
